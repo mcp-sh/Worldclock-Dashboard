@@ -1,0 +1,25 @@
+.item {
+  text-align: center;
+}
+
+#cal h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+}
+
+.city {
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgb(76, 161, 231);
+}
+
+.time {
+  font-size: 6rem;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+.hour {
+  font-weight: 300;
+  font-size: 7rem;
+}
