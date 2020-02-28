@@ -1,18 +1,19 @@
-var DateTime = luxon.DateTime;
+const DateTime = luxon.DateTime;  
+const now = DateTime.local();
 
 function worldTime() {
-  var now = DateTime.local();
-  var nowDate = now.setLocale("de").toLocaleString(DateTime.DATE_HUGE);
 
-  var minute = now.toFormat("mm");
-  var hoursMIA = now.setZone("America/New_York").toFormat("HH");
-  var hoursBER = now.setZone("Europe/Berlin").toFormat("HH");
-  var hoursLON = now.setZone("Europe/London").toFormat("HH");
-  var hoursBKK = now.setZone("Asia/Bangkok").toFormat("HH");
-  var hoursSHA = now.setZone("Asia/Shanghai").toFormat("HH");
-  var hoursMEL = now.setZone("Australia/Melbourne").toFormat("HH");
+  const myDate = now.setLocale("de").toLocaleString(DateTime.DATE_HUGE);
 
-  $("#cal h1").html(nowDate);
+  const minute = now.toFormat("mm");
+  const hoursMIA = now.setZone("America/New_York").toFormat("HH");
+  const hoursBER = now.setZone("Europe/Berlin").toFormat("HH");
+  const hoursLON = now.setZone("Europe/London").toFormat("HH");
+  const hoursBKK = now.setZone("Asia/Bangkok").toFormat("HH");
+  const hoursSHA = now.setZone("Asia/Shanghai").toFormat("HH");
+  const hoursMEL = now.setZone("Australia/Melbourne").toFormat("HH");
+
+  $("#cal h1").html(myDate);
 
   $("#MIA h1").html("<span class='hour'>" + hoursMIA + "</span><br>" + minute);
   $("#LON h1").html("<span class='hour'>" + hoursLON + "</span><br>" + minute);
